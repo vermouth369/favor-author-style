@@ -1,4 +1,4 @@
-# FAVoR: Measuring and Mitigating Author-Style Homogenization
+# FAVoR: Measuring and Mitigating Author-Style Homogenization in Federated Personalized Generation
 
 Official implementation of **FAVoR (Federated Authorial Voice Retention)**, a
 shared--private residual PEFT method for retaining author style in federated
@@ -10,8 +10,17 @@ Classification Encoder (ASCE) target. The repository contains the training and
 evaluation code, paper-aligned configurations, privacy-preserving benchmark
 metadata, validation utilities, and artificial toy fixtures.
 
-> **Camera-ready metadata:** the final author list, venue, paper URL, and
-> bibliographic record must be added before this repository is made public.
+**Lu Han\*, Jingyao Zhang\*, Katy Ilonka Gero, and Nguyen H. Tran**<br>
+School of Computer Science, The University of Sydney<br>
+Sydney, NSW 2006, Australia
+
+\* Corresponding authors:
+[`lhan0123@sydney.edu.au`](mailto:lhan0123@sydney.edu.au) and
+[`jzha0544@sydney.edu.au`](mailto:jzha0544@sydney.edu.au).
+
+Accepted as a Main Conference paper at the
+[2026 Conference on Empirical Methods in Natural Language Processing
+(EMNLP 2026)](https://2026.emnlp.org/), Budapest, Hungary.
 
 ## Repository layout
 
@@ -141,14 +150,30 @@ continuations and author-reference material remain local.
 
 ## Citation
 
-The final BibTeX entry and `CITATION.cff` will be added after the camera-ready
-bibliographic record and author order are confirmed. Until then, cite the paper
-by title and this repository URL.
+If you use this repository, please cite the paper. The ACL Anthology URL, DOI,
+and page range will be added after the proceedings record is published.
+
+```bibtex
+@inproceedings{han2026favor,
+  title     = {{FAVoR}: Measuring and Mitigating Author-Style Homogenization in Federated Personalized Generation},
+  author    = {Han, Lu and Zhang, Jingyao and Gero, Katy Ilonka and Tran, Nguyen H.},
+  booktitle = {Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing},
+  address   = {Budapest, Hungary},
+  publisher = {Association for Computational Linguistics},
+  month     = oct,
+  year      = {2026},
+  note      = {To appear}
+}
+```
+
+Machine-readable citation metadata are available in
+[`CITATION.cff`](CITATION.cff).
 
 ## License and data rights
 
 The original code in this repository is released under the MIT License; see
-[`LICENSE`](LICENSE). This license does not grant rights to the raw BlogText or
-Mythos-Reddit corpora, which are not redistributed here. See
+[`LICENSE`](LICENSE). MIT applies to the repository's original software, not
+to third-party dependencies or corpora. It does not grant rights to the raw
+BlogText or Mythos-Reddit corpora, which are not redistributed here. See
 [`benchmark/favor_bench_v02_1/DATA_STATEMENT.md`](benchmark/favor_bench_v02_1/DATA_STATEMENT.md)
 for the data-release boundary.

@@ -1,0 +1,61 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the FAVoR paper."
+title: "FAVoR: Measuring and Mitigating Author-Style Homogenization in Federated Personalized Generation"
+type: software
+authors:
+  - family-names: Han
+    given-names: Lu
+    affiliation: "School of Computer Science, The University of Sydney"
+    email: lhan0123@sydney.edu.au
+  - family-names: Zhang
+    given-names: Jingyao
+    affiliation: "School of Computer Science, The University of Sydney"
+    email: jzha0544@sydney.edu.au
+  - family-names: Gero
+    given-names: Katy Ilonka
+    affiliation: "School of Computer Science, The University of Sydney"
+  - family-names: Tran
+    given-names: Nguyen H.
+    affiliation: "School of Computer Science, The University of Sydney"
+contact:
+  - family-names: Han
+    given-names: Lu
+    affiliation: "School of Computer Science, The University of Sydney"
+    email: lhan0123@sydney.edu.au
+  - family-names: Zhang
+    given-names: Jingyao
+    affiliation: "School of Computer Science, The University of Sydney"
+    email: jzha0544@sydney.edu.au
+repository-code: "https://github.com/vermouth369/favor-author-style"
+license: MIT
+version: 1.0.0
+date-released: "2026-08-27"
+keywords:
+  - federated learning
+  - personalized generation
+  - author style
+  - parameter-efficient fine-tuning
+  - natural language processing
+preferred-citation:
+  type: conference-paper
+  title: "FAVoR: Measuring and Mitigating Author-Style Homogenization in Federated Personalized Generation"
+  authors:
+    - family-names: Han
+      given-names: Lu
+    - family-names: Zhang
+      given-names: Jingyao
+    - family-names: Gero
+      given-names: Katy Ilonka
+    - family-names: Tran
+      given-names: Nguyen H.
+  collection-title: "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing"
+  conference:
+    name: "The 2026 Conference on Empirical Methods in Natural Language Processing"
+    city: Budapest
+    country: HU
+    date-start: "2026-10-24"
+    date-end: "2026-10-29"
+  publisher:
+    name: "Association for Computational Linguistics"
+  year: 2026
+  month: 10
