@@ -1,0 +1,10 @@
+paper_method: FAVoR
+experiment: toy_valid_run
+dataset: BlogText
+seed: 2026
+method: FAVoR
+private_residual_pack:
+  communicated: false
+asce_alignment:
+  enabled: true
+max_new_tokens: 220

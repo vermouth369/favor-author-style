@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "FAVoR training budget table",
+  "type": "object",
+  "required": [
+    "method",
+    "seed",
+    "rounds",
+    "clients_per_round",
+    "peft_rank",
+    "peft_alpha",
+    "peft_dropout",
+    "base_model",
+    "quantization",
+    "max_new_tokens",
+    "private_residual",
+    "asce_alignment"
+  ],
+  "properties": {
+    "method": {
+      "enum": [
+        "Pooled PEFT",
+        "FedAvg",
+        "FedProx",
+        "pFedMe",
+        "Ditto",
+        "FedDPA",
+        "FAVoR",
+        "Local-only + ASCE"
+      ]
+    }
+  },
+  "additionalProperties": true
+}

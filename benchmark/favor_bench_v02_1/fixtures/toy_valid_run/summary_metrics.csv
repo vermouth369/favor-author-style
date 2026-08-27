@@ -1,0 +1,2 @@
+dataset,method,seed,num_examples,author_accuracy,macro_f1,silhouette,verification_auc,eer,bertscore_f1,semantic_similarity,assistant_score_mean,pass_rate,non_iid_level
+BlogText,FAVoR,2026,1,1.0,1.0,0.14,0.92,0.16,0.81,0.38,0.0,1.0,medium

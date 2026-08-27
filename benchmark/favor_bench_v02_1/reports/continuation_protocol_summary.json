@@ -1,0 +1,18 @@
+{
+  "BlogText": {
+    "clients": 50,
+    "prefix_tokens": 96,
+    "min_gold_continuation_tokens": 64,
+    "max_prompts_per_author": 4,
+    "max_new_tokens": 220,
+    "raw_text_included": false
+  },
+  "Mythos-Reddit": {
+    "authors": 50,
+    "held_out_continuations": 300,
+    "prefix_tokens": 192,
+    "max_new_tokens": 220,
+    "raw_text_included": false,
+    "handles_included": false
+  }
+}

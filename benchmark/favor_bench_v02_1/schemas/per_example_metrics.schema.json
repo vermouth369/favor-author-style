@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "FAVoR per-example continuation metrics",
+  "type": "object",
+  "required": [
+    "generation_id",
+    "dataset",
+    "author_id",
+    "client_id",
+    "method",
+    "seed",
+    "passed_quality_filter",
+    "output_word_count",
+    "distinct_bigram_ratio"
+  ],
+  "properties": {
+    "dataset": {
+      "enum": [
+        "BlogText",
+        "Mythos-Reddit"
+      ]
+    },
+    "method": {
+      "enum": [
+        "Pooled PEFT",
+        "FedAvg",
+        "FedProx",
+        "pFedMe",
+        "Ditto",
+        "FedDPA",
+        "FAVoR",
+        "Local-only + ASCE"
+      ]
+    },
+    "passed_quality_filter": {
+      "type": "boolean"
+    },
+    "asce_embedding_dim": {
+      "const": 256
+    }
+  },
+  "additionalProperties": true
+}

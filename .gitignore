@@ -1,0 +1,54 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+
+# Local environments and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials.json
+
+# Raw/private data and generated experiment artifacts
+exp1/data/*
+!exp1/data/README.md
+runs/
+**/runs/
+outputs/
+**/outputs/
+checkpoints/
+**/checkpoints/
+wandb/
+logs/
+*.log
+
+# Model and array artifacts
+*.bin
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.npy
+*.npz
+
+# Release archives stay in GitHub Releases, not Git history
+*.tgz
+*.tar.gz
+*.zip
+
+# Editors and operating systems
+.DS_Store
+__MACOSX/
+.idea/
+.vscode/
+*~
+*.swp

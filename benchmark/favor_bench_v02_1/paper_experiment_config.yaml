@@ -1,0 +1,45 @@
+paper_experiment: FAVoR ACL held-out continuation
+base_model: Qwen/Qwen2.5-3B-Instruct
+quantization: 4-bit QLoRA, NF4, bfloat16 compute
+peft:
+  method: LoRA
+  rank: 16
+  alpha: 32
+  dropout: 0.05
+  target_modules:
+    - q
+    - k
+    - v
+    - o
+    - gate
+    - up
+    - down
+training:
+  seeds:
+    - 2026
+    - 2027
+    - 2028
+  rounds: 6
+  clients_per_round: 12
+  local_epochs_shared: 1
+  local_epochs_private: 2
+  micro_batch_size: 4
+  gradient_accumulation_steps: 8
+  learning_rate_shared: 0.0002
+  learning_rate_private: 0.0002
+communication:
+  upload_payload: shared-adapter delta only
+  private_residual_upload: false
+  serialized_shared_adapter_bytes: 119801528
+  serialized_shared_adapter_mib: 114.3
+generation:
+  max_new_tokens: 220
+blogtext_medium_split:
+  clients: 50
+  target_train_token_gini: 0.25
+  realized_train_token_gini: 0.1962
+  total_allocated_train_tokens: 904378
+mythos_reddit_external:
+  authors: 50
+  held_out_continuations: 300
+  prefix_tokens: 192

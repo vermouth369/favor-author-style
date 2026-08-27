@@ -1,0 +1,2 @@
+dataset,method,seed,K,non_iid_level,rounds,clients_per_round,local_epochs_shared,local_epochs_private,total_client_updates,peft_rank,peft_alpha,peft_dropout,peft_target_modules,base_model,quantization,micro_batch_size,gradient_accumulation_steps,effective_batch_size,learning_rate,max_new_tokens,prefix_tokens,private_residual,asce_alignment,shared_adapter_upload_only
+BlogText,FAVoR,2026,50,medium,6,12,1,2,72,16,32,0.05,"q,k,v,o,gate,up,down",Qwen/Qwen2.5-3B-Instruct,nf4_4bit,4,8,32,0.0002,220,96,true,true,true

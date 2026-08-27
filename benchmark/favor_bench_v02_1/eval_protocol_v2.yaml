@@ -1,0 +1,41 @@
+protocol_name: FAVoR held-out continuation evaluation
+paper_alignment: FAVoR camera-ready paper
+datasets:
+  BlogText:
+    source: Blog Authorship Corpus via Kaggle redistribution
+    clients: 50
+    client_unit: one author per client
+    split: 80/10/10 train/validation/test after fixed shuffle
+    prompt_source: held-out test posts
+    prefix_tokens: 96
+    min_gold_continuation_tokens: 64
+    max_prompts_per_author: 4
+    max_new_tokens: 220
+    raw_text_in_archive: false
+  Mythos-Reddit:
+    source: r/WritingPrompts external validation
+    authors: 50
+    held_out_continuations: 300
+    prefix_tokens: 192
+    max_new_tokens: 220
+    raw_text_in_archive: false
+    handles_in_archive: false
+metrics:
+  internal_asce:
+    - author_accuracy
+    - macro_f1
+    - centroid_distance
+    - silhouette
+    - collapse_diagnostics
+  external_verifiers:
+    - StyleDistance
+    - MiniLM
+    - stylometric_authorship_features
+  utility:
+    - BERTScore
+    - semantic_similarity
+    - MAUVE_when_available
+quality_filter:
+  min_words: 20
+  min_distinct_bigram_ratio: 0.15
+  refusal_and_template_filter: true

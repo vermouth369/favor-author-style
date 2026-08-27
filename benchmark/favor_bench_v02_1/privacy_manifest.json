@@ -1,0 +1,20 @@
+{
+  "archive": "favor_benchmark_metadata_v1.0.0",
+  "privacy_posture": "anonymized_protocol_and_statistics_only",
+  "contains_raw_blogtext_text": false,
+  "contains_raw_mythos_reddit_text": false,
+  "contains_platform_handles": false,
+  "contains_original_author_ids": false,
+  "contains_original_document_ids": false,
+  "contains_author_reference_sets": false,
+  "contains_author_targets": false,
+  "contains_author_linkable_generated_continuations": false,
+  "contains_private_reverse_mapping": false,
+  "contains_model_weights_or_adapters": false,
+  "toy_data_is_artificial": true,
+  "privacy_notes": [
+    "BlogText split IDs are anonymized.",
+    "Mythos-Reddit is represented by protocol metadata only.",
+    "Raw corpora must be obtained from original providers."
+  ]
+}

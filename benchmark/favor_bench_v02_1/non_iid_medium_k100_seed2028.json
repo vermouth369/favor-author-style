@@ -1,0 +1,951 @@
+{
+  "benchmark": "favor_data_supplement",
+  "freeze_version": "k100_scale_stress_v1",
+  "freeze_date": "2026-05-13T06:23:46.823152+00:00",
+  "non_iid_level": "medium",
+  "build_seed": 2028,
+  "imbalance_family": "lognormal_long_tail",
+  "imbalance_alpha": 0.8,
+  "allocation_policy": "k100_medium_lognormal_all_clients",
+  "num_clients": 100,
+  "num_active_clients": 100,
+  "total_allocated_tokens": 2449068,
+  "actual_gini": 0.2707,
+  "available_train_token_gini": 0.091,
+  "cluster_source": "private build artifact not redistributed",
+  "num_style_clusters": 10,
+  "client_cluster_assignments": {
+    "client_001": 4,
+    "client_002": 7,
+    "client_003": 5,
+    "client_060": 3,
+    "client_004": 0,
+    "client_061": 3,
+    "client_062": 8,
+    "client_063": 6,
+    "client_005": 0,
+    "client_064": 6,
+    "client_006": 0,
+    "client_065": 7,
+    "client_007": 0,
+    "client_066": 4,
+    "client_067": 9,
+    "client_008": 0,
+    "client_068": 0,
+    "client_069": 2,
+    "client_009": 7,
+    "client_070": 9,
+    "client_071": 6,
+    "client_010": 1,
+    "client_011": 0,
+    "client_012": 0,
+    "client_013": 1,
+    "client_072": 3,
+    "client_014": 0,
+    "client_015": 9,
+    "client_016": 5,
+    "client_017": 4,
+    "client_018": 1,
+    "client_019": 6,
+    "client_020": 0,
+    "client_021": 1,
+    "client_073": 7,
+    "client_074": 4,
+    "client_022": 6,
+    "client_023": 1,
+    "client_075": 1,
+    "client_024": 0,
+    "client_076": 2,
+    "client_025": 5,
+    "client_026": 0,
+    "client_027": 7,
+    "client_077": 4,
+    "client_078": 9,
+    "client_028": 4,
+    "client_079": 2,
+    "client_029": 4,
+    "client_030": 2,
+    "client_031": 0,
+    "client_032": 0,
+    "client_033": 9,
+    "client_034": 4,
+    "client_052": 5,
+    "client_080": 4,
+    "client_035": 5,
+    "client_036": 7,
+    "client_081": 8,
+    "client_037": 5,
+    "client_038": 7,
+    "client_082": 2,
+    "client_083": 3,
+    "client_084": 3,
+    "client_085": 3,
+    "client_086": 6,
+    "client_087": 6,
+    "client_039": 2,
+    "client_088": 6,
+    "client_089": 2,
+    "client_040": 9,
+    "client_090": 3,
+    "client_041": 9,
+    "client_091": 3,
+    "client_092": 2,
+    "client_093": 8,
+    "client_094": 2,
+    "client_095": 1,
+    "client_042": 1,
+    "client_096": 3,
+    "client_097": 4,
+    "client_098": 8,
+    "client_099": 3,
+    "client_100": 9,
+    "client_043": 1,
+    "client_053": 7,
+    "client_044": 4,
+    "client_054": 0,
+    "client_055": 7,
+    "client_056": 2,
+    "client_045": 1,
+    "client_046": 1,
+    "client_057": 5,
+    "client_047": 6,
+    "client_051": 6,
+    "client_048": 5,
+    "client_049": 9,
+    "client_050": 9,
+    "client_058": 5,
+    "client_059": 7
+  },
+  "client_allocations": [
+    {
+      "client_id": "client_001",
+      "author_id": "author_001",
+      "allocated_train_tokens": 19355,
+      "available_train_tokens": 39839,
+      "utilization_ratio": 0.4858,
+      "is_active": true
+    },
+    {
+      "client_id": "client_002",
+      "author_id": "author_002",
+      "allocated_train_tokens": 8925,
+      "available_train_tokens": 25926,
+      "utilization_ratio": 0.3442,
+      "is_active": true
+    },
+    {
+      "client_id": "client_003",
+      "author_id": "author_003",
+      "allocated_train_tokens": 7916,
+      "available_train_tokens": 31021,
+      "utilization_ratio": 0.2552,
+      "is_active": true
+    },
+    {
+      "client_id": "client_060",
+      "author_id": "author_060",
+      "allocated_train_tokens": 39664,
+      "available_train_tokens": 39664,
+      "utilization_ratio": 1.0,
+      "is_active": true
+    },
+    {
+      "client_id": "client_004",
+      "author_id": "author_004",
+      "allocated_train_tokens": 27836,
+      "available_train_tokens": 27836,
+      "utilization_ratio": 1.0,
+      "is_active": true
+    },
+    {
+      "client_id": "client_061",
+      "author_id": "author_061",
+      "allocated_train_tokens": 12822,
+      "available_train_tokens": 39515,
+      "utilization_ratio": 0.3245,
+      "is_active": true
+    },
+    {
+      "client_id": "client_062",
+      "author_id": "author_062",
+      "allocated_train_tokens": 13045,
+      "available_train_tokens": 39915,
+      "utilization_ratio": 0.3268,
+      "is_active": true
+    },
+    {
+      "client_id": "client_063",
+      "author_id": "author_063",
+      "allocated_train_tokens": 25080,
+      "available_train_tokens": 39954,
+      "utilization_ratio": 0.6277,
+      "is_active": true
+    },
+    {
+      "client_id": "client_005",
+      "author_id": "author_005",
+      "allocated_train_tokens": 23487,
+      "available_train_tokens": 39828,
+      "utilization_ratio": 0.5897,
+      "is_active": true
+    },
+    {
+      "client_id": "client_064",
+      "author_id": "author_064",
+      "allocated_train_tokens": 33642,
+      "available_train_tokens": 33642,
+      "utilization_ratio": 1.0,
+      "is_active": true
+    },
+    {
+      "client_id": "client_006",
+      "author_id": "author_006",
+      "allocated_train_tokens": 13395,
+      "available_train_tokens": 28377,
+      "utilization_ratio": 0.472,
+      "is_active": true
+    },
+    {
+      "client_id": "client_065",
+      "author_id": "author_065",
+      "allocated_train_tokens": 27822,
+      "available_train_tokens": 39876,
+      "utilization_ratio": 0.6977,
+      "is_active": true
+    },
+    {
+      "client_id": "client_007",
+      "author_id": "author_007",
+      "allocated_train_tokens": 39800,
+      "available_train_tokens": 39800,
+      "utilization_ratio": 1.0,
+      "is_active": true
+    },
+    {
+      "client_id": "client_066",
+      "author_id": "author_066",
+      "allocated_train_tokens": 26120,
+      "available_train_tokens": 33032,
+      "utilization_ratio": 0.7907,
+      "is_active": true
+    },
+    {
+      "client_id": "client_067",
+      "author_id": "author_067",
+      "allocated_train_tokens": 8830,
+      "available_train_tokens": 39830,
+      "utilization_ratio": 0.2217,
+      "is_active": true
+    },
+    {
+      "client_id": "client_008",
+      "author_id": "author_008",
+      "allocated_train_tokens": 26571,
+      "available_train_tokens": 39925,
+      "utilization_ratio": 0.6655,
+      "is_active": true
+    },
+    {
+      "client_id": "client_068",
+      "author_id": "author_068",
+      "allocated_train_tokens": 34157,
+      "available_train_tokens": 39548,
+      "utilization_ratio": 0.8637,
+      "is_active": true
+    },
+    {
+      "client_id": "client_069",
+      "author_id": "author_069",
+      "allocated_train_tokens": 26636,
+      "available_train_tokens": 26636,
+      "utilization_ratio": 1.0,
+      "is_active": true
+    },
+    {
+      "client_id": "client_009",
+      "author_id": "author_009",
+      "allocated_train_tokens": 39994,
+      "available_train_tokens": 39994,
+      "utilization_ratio": 1.0,
+      "is_active": true
+    },
+    {
+      "client_id": "client_070",
+      "author_id": "author_070",
+      "allocated_train_tokens": 39803,
+      "available_train_tokens": 39803,
+      "utilization_ratio": 1.0,
+      "is_active": true
+    },
+    {
+      "client_id": "client_071",
+      "author_id": "author_071",
+      "allocated_train_tokens": 2032,
+      "available_train_tokens": 39757,
+      "utilization_ratio": 0.0511,
+      "is_active": true
+    },
+    {
+      "client_id": "client_010",
+      "author_id": "author_010",
+      "allocated_train_tokens": 39775,
+      "available_train_tokens": 39775,
+      "utilization_ratio": 1.0,
+      "is_active": true
+    },
+    {
+      "client_id": "client_011",
+      "author_id": "author_011",
+      "allocated_train_tokens": 26987,
+      "available_train_tokens": 26987,
+      "utilization_ratio": 1.0,
+      "is_active": true
+    },
+    {
+      "client_id": "client_012",
+      "author_id": "author_012",
+      "allocated_train_tokens": 32716,
+      "available_train_tokens": 32716,
+      "utilization_ratio": 1.0,
+      "is_active": true
+    },
+    {
+      "client_id": "client_013",
+      "author_id": "author_013",
+      "allocated_train_tokens": 34671,
+      "available_train_tokens": 39752,
+      "utilization_ratio": 0.8722,
+      "is_active": true
+    },
+    {
+      "client_id": "client_072",
+      "author_id": "author_072",
+      "allocated_train_tokens": 39726,
+      "available_train_tokens": 39726,
+      "utilization_ratio": 1.0,
+      "is_active": true
+    },
+    {
+      "client_id": "client_014",
+      "author_id": "author_014",
+      "allocated_train_tokens": 31503,
+      "available_train_tokens": 39625,
+      "utilization_ratio": 0.795,
+      "is_active": true
+    },
+    {
+      "client_id": "client_015",
+      "author_id": "author_015",
+      "allocated_train_tokens": 37795,
+      "available_train_tokens": 37795,
+      "utilization_ratio": 1.0,
+      "is_active": true
+    },
+    {
+      "client_id": "client_016",
+      "author_id": "author_016",
+      "allocated_train_tokens": 28088,
+      "available_train_tokens": 28088,
+      "utilization_ratio": 1.0,
+      "is_active": true
+    },
+    {
+      "client_id": "client_017",
+      "author_id": "author_017",
+      "allocated_train_tokens": 32421,
+      "available_train_tokens": 32421,
+      "utilization_ratio": 1.0,
+      "is_active": true
+    },
+    {
+      "client_id": "client_018",
+      "author_id": "author_018",
+      "allocated_train_tokens": 16126,
+      "available_train_tokens": 28675,
+      "utilization_ratio": 0.5624,
+      "is_active": true
+    },
+    {
+      "client_id": "client_019",
+      "author_id": "author_019",
+      "allocated_train_tokens": 22947,
+      "available_train_tokens": 37253,
+      "utilization_ratio": 0.616,
+      "is_active": true
+    },
+    {
+      "client_id": "client_020",
+      "author_id": "author_020",
+      "allocated_train_tokens": 4507,
+      "available_train_tokens": 24371,
+      "utilization_ratio": 0.1849,
+      "is_active": true
+    },
+    {
+      "client_id": "client_021",
+      "author_id": "author_021",
+      "allocated_train_tokens": 39758,
+      "available_train_tokens": 39758,
+      "utilization_ratio": 1.0,
+      "is_active": true
+    },
+    {
+      "client_id": "client_073",
+      "author_id": "author_073",
+      "allocated_train_tokens": 39919,
+      "available_train_tokens": 39919,
+      "utilization_ratio": 1.0,
+      "is_active": true
+    },
+    {
+      "client_id": "client_074",
+      "author_id": "author_074",
+      "allocated_train_tokens": 28409,
+      "available_train_tokens": 28409,
+      "utilization_ratio": 1.0,
+      "is_active": true
+    },
+    {
+      "client_id": "client_022",
+      "author_id": "author_022",
+      "allocated_train_tokens": 10083,
+      "available_train_tokens": 39963,
+      "utilization_ratio": 0.2523,
+      "is_active": true
+    },
+    {
+      "client_id": "client_023",
+      "author_id": "author_023",
+      "allocated_train_tokens": 39426,
+      "available_train_tokens": 39908,
+      "utilization_ratio": 0.9879,
+      "is_active": true
+    },
+    {
+      "client_id": "client_075",
+      "author_id": "author_075",
+      "allocated_train_tokens": 39870,
+      "available_train_tokens": 39870,
+      "utilization_ratio": 1.0,
+      "is_active": true
+    },
+    {
+      "client_id": "client_024",
+      "author_id": "author_024",
+      "allocated_train_tokens": 5165,
+      "available_train_tokens": 26065,
+      "utilization_ratio": 0.1982,
+      "is_active": true
+    },
+    {
+      "client_id": "client_076",
+      "author_id": "author_076",
+      "allocated_train_tokens": 14224,
+      "available_train_tokens": 29200,
+      "utilization_ratio": 0.4871,
+      "is_active": true
+    },
+    {
+      "client_id": "client_025",
+      "author_id": "author_025",
+      "allocated_train_tokens": 28642,
+      "available_train_tokens": 39737,
+      "utilization_ratio": 0.7208,
+      "is_active": true
+    },
+    {
+      "client_id": "client_026",
+      "author_id": "author_026",
+      "allocated_train_tokens": 14064,
+      "available_train_tokens": 39917,
+      "utilization_ratio": 0.3523,
+      "is_active": true
+    },
+    {
+      "client_id": "client_027",
+      "author_id": "author_027",
+      "allocated_train_tokens": 35484,
+      "available_train_tokens": 36521,
+      "utilization_ratio": 0.9716,
+      "is_active": true
+    },
+    {
+      "client_id": "client_077",
+      "author_id": "author_077",
+      "allocated_train_tokens": 39986,
+      "available_train_tokens": 39986,
+      "utilization_ratio": 1.0,
+      "is_active": true
+    },
+    {
+      "client_id": "client_078",
+      "author_id": "author_078",
+      "allocated_train_tokens": 29994,
+      "available_train_tokens": 39843,
+      "utilization_ratio": 0.7528,
+      "is_active": true
+    },
+    {
+      "client_id": "client_028",
+      "author_id": "author_028",
+      "allocated_train_tokens": 38204,
+      "available_train_tokens": 39455,
+      "utilization_ratio": 0.9683,
+      "is_active": true
+    },
+    {
+      "client_id": "client_079",
+      "author_id": "author_079",
+      "allocated_train_tokens": 17859,
+      "available_train_tokens": 25747,
+      "utilization_ratio": 0.6936,
+      "is_active": true
+    },
+    {
+      "client_id": "client_029",
+      "author_id": "author_029",
+      "allocated_train_tokens": 34033,
+      "available_train_tokens": 39951,
+      "utilization_ratio": 0.8519,
+      "is_active": true
+    },
+    {
+      "client_id": "client_030",
+      "author_id": "author_030",
+      "allocated_train_tokens": 6275,
+      "available_train_tokens": 32379,
+      "utilization_ratio": 0.1938,
+      "is_active": true
+    },
+    {
+      "client_id": "client_031",
+      "author_id": "author_031",
+      "allocated_train_tokens": 10808,
+      "available_train_tokens": 32637,
+      "utilization_ratio": 0.3312,
+      "is_active": true
+    },
+    {
+      "client_id": "client_032",
+      "author_id": "author_032",
+      "allocated_train_tokens": 39653,
+      "available_train_tokens": 39653,
+      "utilization_ratio": 1.0,
+      "is_active": true
+    },
+    {
+      "client_id": "client_033",
+      "author_id": "author_033",
+      "allocated_train_tokens": 39978,
+      "available_train_tokens": 39978,
+      "utilization_ratio": 1.0,
+      "is_active": true
+    },
+    {
+      "client_id": "client_034",
+      "author_id": "author_034",
+      "allocated_train_tokens": 39636,
+      "available_train_tokens": 39636,
+      "utilization_ratio": 1.0,
+      "is_active": true
+    },
+    {
+      "client_id": "client_052",
+      "author_id": "author_052",
+      "allocated_train_tokens": 13069,
+      "available_train_tokens": 39960,
+      "utilization_ratio": 0.3271,
+      "is_active": true
+    },
+    {
+      "client_id": "client_080",
+      "author_id": "author_080",
+      "allocated_train_tokens": 33365,
+      "available_train_tokens": 39568,
+      "utilization_ratio": 0.8432,
+      "is_active": true
+    },
+    {
+      "client_id": "client_035",
+      "author_id": "author_035",
+      "allocated_train_tokens": 22434,
+      "available_train_tokens": 31693,
+      "utilization_ratio": 0.7079,
+      "is_active": true
+    },
+    {
+      "client_id": "client_036",
+      "author_id": "author_036",
+      "allocated_train_tokens": 36260,
+      "available_train_tokens": 39627,
+      "utilization_ratio": 0.915,
+      "is_active": true
+    },
+    {
+      "client_id": "client_081",
+      "author_id": "author_081",
+      "allocated_train_tokens": 24517,
+      "available_train_tokens": 39875,
+      "utilization_ratio": 0.6148,
+      "is_active": true
+    },
+    {
+      "client_id": "client_037",
+      "author_id": "author_037",
+      "allocated_train_tokens": 27361,
+      "available_train_tokens": 39820,
+      "utilization_ratio": 0.6871,
+      "is_active": true
+    },
+    {
+      "client_id": "client_038",
+      "author_id": "author_038",
+      "allocated_train_tokens": 7843,
+      "available_train_tokens": 39866,
+      "utilization_ratio": 0.1967,
+      "is_active": true
+    },
+    {
+      "client_id": "client_082",
+      "author_id": "author_082",
+      "allocated_train_tokens": 39583,
+      "available_train_tokens": 39583,
+      "utilization_ratio": 1.0,
+      "is_active": true
+    },
+    {
+      "client_id": "client_083",
+      "author_id": "author_083",
+      "allocated_train_tokens": 7942,
+      "available_train_tokens": 39841,
+      "utilization_ratio": 0.1993,
+      "is_active": true
+    },
+    {
+      "client_id": "client_084",
+      "author_id": "author_084",
+      "allocated_train_tokens": 11064,
+      "available_train_tokens": 39492,
+      "utilization_ratio": 0.2802,
+      "is_active": true
+    },
+    {
+      "client_id": "client_085",
+      "author_id": "author_085",
+      "allocated_train_tokens": 19024,
+      "available_train_tokens": 39690,
+      "utilization_ratio": 0.4793,
+      "is_active": true
+    },
+    {
+      "client_id": "client_086",
+      "author_id": "author_086",
+      "allocated_train_tokens": 32159,
+      "available_train_tokens": 32159,
+      "utilization_ratio": 1.0,
+      "is_active": true
+    },
+    {
+      "client_id": "client_087",
+      "author_id": "author_087",
+      "allocated_train_tokens": 39927,
+      "available_train_tokens": 39927,
+      "utilization_ratio": 1.0,
+      "is_active": true
+    },
+    {
+      "client_id": "client_039",
+      "author_id": "author_039",
+      "allocated_train_tokens": 25728,
+      "available_train_tokens": 25728,
+      "utilization_ratio": 1.0,
+      "is_active": true
+    },
+    {
+      "client_id": "client_088",
+      "author_id": "author_088",
+      "allocated_train_tokens": 35108,
+      "available_train_tokens": 35108,
+      "utilization_ratio": 1.0,
+      "is_active": true
+    },
+    {
+      "client_id": "client_089",
+      "author_id": "author_089",
+      "allocated_train_tokens": 23296,
+      "available_train_tokens": 23296,
+      "utilization_ratio": 1.0,
+      "is_active": true
+    },
+    {
+      "client_id": "client_040",
+      "author_id": "author_040",
+      "allocated_train_tokens": 5457,
+      "available_train_tokens": 33562,
+      "utilization_ratio": 0.1626,
+      "is_active": true
+    },
+    {
+      "client_id": "client_090",
+      "author_id": "author_090",
+      "allocated_train_tokens": 24127,
+      "available_train_tokens": 33083,
+      "utilization_ratio": 0.7293,
+      "is_active": true
+    },
+    {
+      "client_id": "client_041",
+      "author_id": "author_041",
+      "allocated_train_tokens": 34821,
+      "available_train_tokens": 35048,
+      "utilization_ratio": 0.9935,
+      "is_active": true
+    },
+    {
+      "client_id": "client_091",
+      "author_id": "author_091",
+      "allocated_train_tokens": 36915,
+      "available_train_tokens": 36915,
+      "utilization_ratio": 1.0,
+      "is_active": true
+    },
+    {
+      "client_id": "client_092",
+      "author_id": "author_092",
+      "allocated_train_tokens": 19026,
+      "available_train_tokens": 28474,
+      "utilization_ratio": 0.6682,
+      "is_active": true
+    },
+    {
+      "client_id": "client_093",
+      "author_id": "author_093",
+      "allocated_train_tokens": 17621,
+      "available_train_tokens": 39503,
+      "utilization_ratio": 0.4461,
+      "is_active": true
+    },
+    {
+      "client_id": "client_094",
+      "author_id": "author_094",
+      "allocated_train_tokens": 30780,
+      "available_train_tokens": 30780,
+      "utilization_ratio": 1.0,
+      "is_active": true
+    },
+    {
+      "client_id": "client_095",
+      "author_id": "author_095",
+      "allocated_train_tokens": 17088,
+      "available_train_tokens": 39886,
+      "utilization_ratio": 0.4284,
+      "is_active": true
+    },
+    {
+      "client_id": "client_042",
+      "author_id": "author_042",
+      "allocated_train_tokens": 26108,
+      "available_train_tokens": 26108,
+      "utilization_ratio": 1.0,
+      "is_active": true
+    },
+    {
+      "client_id": "client_096",
+      "author_id": "author_096",
+      "allocated_train_tokens": 37500,
+      "available_train_tokens": 39499,
+      "utilization_ratio": 0.9494,
+      "is_active": true
+    },
+    {
+      "client_id": "client_097",
+      "author_id": "author_097",
+      "allocated_train_tokens": 28314,
+      "available_train_tokens": 28314,
+      "utilization_ratio": 1.0,
+      "is_active": true
+    },
+    {
+      "client_id": "client_098",
+      "author_id": "author_098",
+      "allocated_train_tokens": 8017,
+      "available_train_tokens": 8017,
+      "utilization_ratio": 1.0,
+      "is_active": true
+    },
+    {
+      "client_id": "client_099",
+      "author_id": "author_099",
+      "allocated_train_tokens": 9751,
+      "available_train_tokens": 28641,
+      "utilization_ratio": 0.3405,
+      "is_active": true
+    },
+    {
+      "client_id": "client_100",
+      "author_id": "author_100",
+      "allocated_train_tokens": 2632,
+      "available_train_tokens": 25524,
+      "utilization_ratio": 0.1031,
+      "is_active": true
+    },
+    {
+      "client_id": "client_043",
+      "author_id": "author_043",
+      "allocated_train_tokens": 22877,
+      "available_train_tokens": 22877,
+      "utilization_ratio": 1.0,
+      "is_active": true
+    },
+    {
+      "client_id": "client_053",
+      "author_id": "author_053",
+      "allocated_train_tokens": 10267,
+      "available_train_tokens": 28004,
+      "utilization_ratio": 0.3666,
+      "is_active": true
+    },
+    {
+      "client_id": "client_044",
+      "author_id": "author_044",
+      "allocated_train_tokens": 9295,
+      "available_train_tokens": 27425,
+      "utilization_ratio": 0.3389,
+      "is_active": true
+    },
+    {
+      "client_id": "client_054",
+      "author_id": "author_054",
+      "allocated_train_tokens": 29303,
+      "available_train_tokens": 29303,
+      "utilization_ratio": 1.0,
+      "is_active": true
+    },
+    {
+      "client_id": "client_055",
+      "author_id": "author_055",
+      "allocated_train_tokens": 15639,
+      "available_train_tokens": 39874,
+      "utilization_ratio": 0.3922,
+      "is_active": true
+    },
+    {
+      "client_id": "client_056",
+      "author_id": "author_056",
+      "allocated_train_tokens": 23911,
+      "available_train_tokens": 25831,
+      "utilization_ratio": 0.9257,
+      "is_active": true
+    },
+    {
+      "client_id": "client_045",
+      "author_id": "author_045",
+      "allocated_train_tokens": 14969,
+      "available_train_tokens": 39695,
+      "utilization_ratio": 0.3771,
+      "is_active": true
+    },
+    {
+      "client_id": "client_046",
+      "author_id": "author_046",
+      "allocated_train_tokens": 37066,
+      "available_train_tokens": 39871,
+      "utilization_ratio": 0.9296,
+      "is_active": true
+    },
+    {
+      "client_id": "client_057",
+      "author_id": "author_057",
+      "allocated_train_tokens": 14052,
+      "available_train_tokens": 34359,
+      "utilization_ratio": 0.409,
+      "is_active": true
+    },
+    {
+      "client_id": "client_047",
+      "author_id": "author_047",
+      "allocated_train_tokens": 27758,
+      "available_train_tokens": 39851,
+      "utilization_ratio": 0.6965,
+      "is_active": true
+    },
+    {
+      "client_id": "client_051",
+      "author_id": "author_051",
+      "allocated_train_tokens": 17128,
+      "available_train_tokens": 39728,
+      "utilization_ratio": 0.4311,
+      "is_active": true
+    },
+    {
+      "client_id": "client_048",
+      "author_id": "author_048",
+      "allocated_train_tokens": 17619,
+      "available_train_tokens": 36405,
+      "utilization_ratio": 0.484,
+      "is_active": true
+    },
+    {
+      "client_id": "client_049",
+      "author_id": "author_049",
+      "allocated_train_tokens": 11127,
+      "available_train_tokens": 20478,
+      "utilization_ratio": 0.5434,
+      "is_active": true
+    },
+    {
+      "client_id": "client_050",
+      "author_id": "author_050",
+      "allocated_train_tokens": 39962,
+      "available_train_tokens": 39962,
+      "utilization_ratio": 1.0,
+      "is_active": true
+    },
+    {
+      "client_id": "client_058",
+      "author_id": "author_058",
+      "allocated_train_tokens": 13715,
+      "available_train_tokens": 39922,
+      "utilization_ratio": 0.3435,
+      "is_active": true
+    },
+    {
+      "client_id": "client_059",
+      "author_id": "author_059",
+      "allocated_train_tokens": 11879,
+      "available_train_tokens": 37063,
+      "utilization_ratio": 0.3205,
+      "is_active": true
+    }
+  ],
+  "summary": {
+    "client_token_gini": 0.2707,
+    "cluster_token_gini": 0.1765,
+    "largest_client_token_share": 0.0163,
+    "largest_cluster_token_share": 0.147,
+    "per_cluster_client_counts": {
+      "0": 15,
+      "1": 11,
+      "2": 10,
+      "3": 10,
+      "4": 11,
+      "5": 9,
+      "6": 10,
+      "7": 10,
+      "8": 4,
+      "9": 10
+    },
+    "per_cluster_allocated_tokens": {
+      "0": 359952,
+      "1": 327734,
+      "2": 227318,
+      "3": 238535,
+      "4": 329138,
+      "5": 172896,
+      "6": 245864,
+      "7": 234032,
+      "8": 63200,
+      "9": 250399
+    }
+  }
+}

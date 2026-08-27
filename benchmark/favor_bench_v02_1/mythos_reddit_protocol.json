@@ -1,0 +1,23 @@
+{
+  "dataset": "Mythos-Reddit",
+  "source_subset": "r/WritingPrompts",
+  "role_in_paper": "external_validation",
+  "num_authors": 50,
+  "num_balanced_held_out_continuations": 300,
+  "prefix_tokens": 192,
+  "max_new_tokens": 220,
+  "methods_reported": [
+    "FedAvg",
+    "FedProx",
+    "pFedMe",
+    "Ditto",
+    "FedDPA",
+    "FAVoR"
+  ],
+  "raw_text_included": false,
+  "handles_included": false,
+  "author_reference_sets_included": false,
+  "author_targets_included": false,
+  "split_manifest_included": "No raw or handle-linked manifest is redistributed.",
+  "privacy_note": "Only aggregate protocol metadata is included for Mythos-Reddit."
+}

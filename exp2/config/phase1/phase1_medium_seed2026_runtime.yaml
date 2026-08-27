@@ -1,0 +1,155 @@
+experiment:
+  name: phase1_medium_seed2026_runtime
+  stage: main_blogtext
+  method: FAVoR
+  evaluation_mode: held_out_continuation
+
+paths:
+  base_model_config: exp2/config/base_model.yaml
+  data_dir: exp1/data
+  pooled_dir: exp1/data/pooled/K=50
+  prototype_dir: benchmark/favor_bench_v02_1
+  runs_dir: runs/phase1_medium/seed2026
+  assistant_phrases_file: exp1/metrics/assistant_phrases.txt
+  benchmark_dir: benchmark/favor_bench_v02_1
+
+data:
+  dataset: BlogText
+  clients: 50
+  non_iid:
+    level: medium
+    manifest_path: benchmark/favor_bench_v02_1/non_iid_medium_v02.json
+
+seeds:
+  training: 2026
+  training_replicates: [2026, 2027, 2028]
+  generation: 42
+
+peft:
+  type: qlora
+  r: 16
+  rank: 16
+  alpha: 32
+  dropout: 0.05
+  rank_private: 16
+  alpha_private: 32
+  dropout_private: 0.05
+  target_modules:
+    - q_proj
+    - k_proj
+    - v_proj
+    - o_proj
+    - gate_proj
+    - up_proj
+    - down_proj
+  target_modules_private:
+    - q_proj
+    - k_proj
+    - v_proj
+    - o_proj
+    - gate_proj
+    - up_proj
+    - down_proj
+  bias: none
+
+fed:
+  rounds: 6
+  clients_per_round: 12
+  local_epochs: 1
+  local_epochs_private: 2
+  local_lr: 2.0e-4
+  local_lr_private: 2.0e-4
+  warmup_ratio: 0.03
+  max_seq_len: 1024
+  micro_batch_size: 4
+  gradient_accumulation_steps: 8
+  sample_mode: stratified_uncovered
+  dataloader_num_workers: 0
+  dataloader_pin_memory: false
+  dataloader_persistent_workers: false
+
+favor:
+  shared_adapter_uploaded: true
+  private_residual_pack_local_only: true
+  private_residual_reference: client_shared_endpoint
+  private_residual_reconstructed_at_inference: true
+  asce_alignment:
+    enabled: true
+    loss: cosine
+    weight: 0.3
+    target_source: empirical_per_client_reference_texts
+    projector:
+      type: mlp_2
+      hidden_dim: 1024
+      dropout: 0.05
+      use_layer_norm: true
+
+asce_private_alignment:
+  enabled: true
+  model_dir: exp1/runs/exp1_asce_full/K=50/author_classifier
+  target_source: empirical_per_client_reference_texts
+  normalize_targets: true
+  loss_type: cosine
+  weight: 0.3
+  warmup_fraction: 0.05
+  min_supervised_tokens: 8
+  pooling: mean_supervised_tokens
+  fail_policy: error
+  projector:
+    type: mlp_2
+    hidden_dim: 1024
+    dropout: 0.05
+    use_layer_norm: true
+
+losses:
+  task:
+    enabled: true
+    weight: 1.0
+  prox_shared:
+    enabled: true
+    weight: 0.001
+  style_consistency:
+    enabled: false
+    weight: 0.0
+  anti_assistant:
+    enabled: false
+    weight: 0.0
+  diversity:
+    enabled: false
+    weight: 0.0
+
+generation:
+  do_sample: false
+  temperature: 0.0
+  top_p: 1.0
+  max_new_tokens: 220
+  repetition_penalty: 1.1
+  no_repeat_ngram_size: 3
+  continuation_roster_path: exp1/data/continuation_roster.json
+  eval_mode:
+    mode: held_out_continuation
+    held_out_continuation:
+      n_per_client: 4
+      prefix_tokens: 96
+      min_gold_tokens: 64
+      seed: null
+
+quality_filters:
+  enabled: true
+  min_output_tokens: 20
+  min_distinct_bigram_ratio: 0.15
+  refusal_phrases:
+    - I cannot
+    - I can't
+    - As an AI
+    - I'm sorry
+  filter_templated_refusal: true
+  filter_repetition_collapse: true
+
+closest_global_local_baseline:
+  feddpa:
+    gate_reference_budget: 5
+    fusion_budget_examples: 16
+    alpha_gate: 0.5
+    lambda_gate: 0.5
+    seed_gate: 2026

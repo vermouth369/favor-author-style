@@ -1,0 +1,24 @@
+{
+  "aligned_to": "FAVoR camera-ready paper",
+  "method": "shared-private residual FAVoR with ASCE alignment",
+  "evaluation": "held-out continuation",
+  "included_reported_split_metadata": [
+    "BlogText medium 50-client split",
+    "BlogText K=100 stress-test split",
+    "Mythos-Reddit aggregate external-validation protocol"
+  ],
+  "canonical_methods_present": [
+    "Pooled PEFT",
+    "FedAvg",
+    "FedProx",
+    "pFedMe",
+    "Ditto",
+    "FedDPA",
+    "FAVoR",
+    "Local-only + ASCE"
+  ],
+  "quality_filter": {
+    "fail_if_output_word_count_lt": 20,
+    "fail_if_distinct_bigram_ratio_lt": 0.15
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "paper_protocol": "FAVoR held-out continuation",
+  "training_seeds": [
+    2026
+  ],
+  "generation": {
+    "max_new_tokens": 220,
+    "blogtext_prefix_tokens": 96
+  },
+  "notes": "Toy fixture seeds only."
+}

@@ -1,0 +1,10 @@
+{
+  "dataset": "BlogText",
+  "num_clients": 50,
+  "actual_gini": 0.1962,
+  "target_gini": 0.25,
+  "total_allocated_tokens": 904378,
+  "allocation_policy": "moderate_long_tail",
+  "imbalance_strength_label": "moderate",
+  "raw_text_included": false
+}

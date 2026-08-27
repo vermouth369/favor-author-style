@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "FAVoR summary metrics table",
+  "type": "object",
+  "required": [
+    "dataset",
+    "method",
+    "seed",
+    "author_accuracy",
+    "macro_f1",
+    "verification_auc",
+    "eer",
+    "bertscore_f1",
+    "semantic_similarity",
+    "pass_rate"
+  ],
+  "properties": {
+    "method": {
+      "enum": [
+        "Pooled PEFT",
+        "FedAvg",
+        "FedProx",
+        "pFedMe",
+        "Ditto",
+        "FedDPA",
+        "FAVoR",
+        "Local-only + ASCE"
+      ]
+    }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,98 @@
+experiment:
+  name: phase1_medium_paper_aligned
+  stage: main_blogtext
+  method: FAVoR
+  evaluation_mode: held_out_continuation
+
+data:
+  dataset: BlogText
+  clients: 50
+  client_unit: one_author_per_client
+  min_tokens_per_author: 30000
+  split: 80_10_10
+  non_iid_level: medium
+  manifest_path: ../../benchmark/favor_bench_v02_1/non_iid_medium_v02.json
+  pooled_dir: ../../exp1/data/pooled/K=50
+  target_train_token_gini: 0.25
+  realized_train_token_gini: 0.1962
+  allocated_train_tokens: 904378
+
+seeds:
+  training: [2026, 2027, 2028]
+  generation: 42
+
+model:
+  base_model: Qwen/Qwen2.5-3B-Instruct
+  quantization: nf4_4bit
+  compute_dtype: bfloat16
+
+peft:
+  method: lora
+  rank: 16
+  alpha: 32
+  dropout: 0.05
+  target_modules:
+    - q_proj
+    - k_proj
+    - v_proj
+    - o_proj
+    - gate_proj
+    - up_proj
+    - down_proj
+
+federated:
+  rounds: 6
+  clients_per_round: 12
+  expected_participations_per_author: 1.44
+  local_epochs_shared: 1
+  local_epochs_private: 2
+  local_lr_shared: 2.0e-4
+  local_lr_private: 2.0e-4
+  warmup_ratio: 0.03
+  max_seq_len: 1024
+  micro_batch_size: 4
+  gradient_accumulation_steps: 8
+  shared_proximal_weight: 0.001
+
+favor:
+  shared_adapter_uploaded: true
+  private_residual_pack_local_only: true
+  private_residual_reference: client_shared_endpoint
+  private_residual_reconstructed_at_inference: true
+  asce_alignment:
+    enabled: true
+    encoder_spec: ../../benchmark/favor_bench_v02_1/asce_encoder_spec.json
+    loss: cosine
+    weight: 0.3
+    target_source: empirical_per_client_reference_texts
+    projector:
+      type: mlp_2
+      hidden_dim: 1024
+      dropout: 0.05
+      discarded_after_private_stage: true
+
+generation:
+  blogtext_prefix_tokens: 96
+  mythos_reddit_prefix_tokens: 192
+  max_new_tokens: 220
+  do_sample: false
+  temperature: 0.0
+  top_p: 1.0
+  repetition_penalty: 1.1
+  no_repeat_ngram_size: 3
+
+quality_filter:
+  min_output_words: 20
+  min_distinct_bigram_ratio: 0.15
+
+metrics:
+  primary_style_space: ASCE
+  asce_embedding_dim: 256
+  external_verifiers:
+    - StyleDistance
+    - MiniLM
+    - Stylometry
+  utility:
+    - BERTScore
+    - semantic_similarity
+    - MAUVE

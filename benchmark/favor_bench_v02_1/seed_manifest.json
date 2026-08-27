@@ -1,0 +1,23 @@
+{
+  "paper_protocol": "FAVoR held-out continuation",
+  "training_seeds": [
+    2026,
+    2027,
+    2028
+  ],
+  "data_split_seed": 2026,
+  "author_sample_seed": 2026,
+  "non_iid_allocation_seeds": {
+    "medium": 2027,
+    "medium_k100": [
+      2026,
+      2027,
+      2028
+    ]
+  },
+  "generation": {
+    "max_new_tokens": 220,
+    "blogtext_prefix_tokens": 96,
+    "mythos_reddit_prefix_tokens": 192
+  }
+}

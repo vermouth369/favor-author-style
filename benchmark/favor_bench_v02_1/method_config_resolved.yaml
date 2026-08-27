@@ -1,0 +1,50 @@
+paper_method: FAVoR
+expanded_name: Federated Authorial Voice Retention
+method_family: shared_private_federated_peft
+canonical_methods:
+  - Pooled PEFT
+  - FedAvg
+  - FedProx
+  - pFedMe
+  - Ditto
+  - FedDPA
+  - FAVoR
+  - Local-only + ASCE
+favor:
+  shared_adapter:
+    communicated: true
+    aggregated_on_server: true
+    purpose: transferable continuation competence
+  private_residual_pack:
+    communicated: false
+    stored_client_local: true
+    definition: factor-wise residual from client shared endpoint to client private adapter
+    reconstruction: shared_adapter_plus_private_residual_pack
+  asce_alignment:
+    enabled: true
+    encoder: ASCE
+    author_target_source: deterministic local author-reference set
+    encoder_frozen_during_fl: true
+  privacy_boundary:
+    server_receives: shared-adapter deltas only
+    server_never_receives:
+      - raw author text
+      - author-reference sets
+      - ASCE author targets
+      - private residual packs
+      - platform handles
+baselines:
+  FedAvg:
+    role: standard federated PEFT baseline
+  FedProx:
+    role: proximal federated PEFT baseline
+  pFedMe:
+    role: personalized federated baseline
+  Ditto:
+    role: personalized federated baseline
+  FedDPA:
+    role: global-local adapter baseline
+  Pooled PEFT:
+    role: centralized non-federated reference
+  Local-only + ASCE:
+    role: non-collaborative style-retention reference

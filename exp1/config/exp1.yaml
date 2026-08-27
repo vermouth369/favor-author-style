@@ -1,0 +1,74 @@
+# Public classifier configuration used for the paper's ASCE artifacts.
+# Paths are resolved from exp1/ by exp2/scripts/train_asce_full_k50.sh.
+
+paths:
+  data_dir: data
+  assistant_phrases_file: metrics/assistant_phrases.txt
+  runs_dir: runs/exp1
+
+sweep:
+  k_values: [50]
+
+seeds:
+  author_sample: 2026
+  data_split: 2026
+  training: 2026
+
+data:
+  min_tokens_per_author: 30000
+  train_ratio: 0.8
+  val_ratio: 0.1
+  test_ratio: 0.1
+
+classifiers:
+  backend: arcface
+  shared:
+    encoder: distilroberta-base
+    pooling: mean
+    embedding_dim: 256
+    dropout: 0.1
+    use_layer_norm: true
+    normalize_embeddings: true
+  authorship:
+    encoder: distilroberta-base
+    margin_m: 0.35
+    scale_s: 30.0
+    max_chunks_per_author: 200
+    max_seq_len: 256
+    batch_size: 32
+    lr: 2.0e-5
+    epochs: 3
+    save_empirical_prototypes: true
+    classifier_scope: author_disjoint_50
+  assistant:
+    encoder: distilroberta-base
+    margin_m: 0.20
+    scale_s: 16.0
+    max_samples_per_class: 5000
+    max_seq_len: 256
+    batch_size: 32
+    lr: 2.0e-5
+    epochs: 3
+    calibrator:
+      enabled: true
+      method: temperature
+      source: held_out_val
+      use_human_labels_if_available: true
+
+embedding:
+  model: sentence-transformers/all-MiniLM-L6-v2
+
+metrics:
+  style_space:
+    backend: arcface
+    arcface_required: true
+    distance: cosine
+    authorship_model_dir: runs/exp1/K=50/author_classifier
+    use_empirical_prototypes: true
+  assistant_scoring:
+    backend: arcface
+    arcface_required: true
+    assistant_model_dir: runs/exp1/assistant_classifier
+    use_calibrated_probability: true
+  semantic_space:
+    embedding_model: sentence-transformers/all-MiniLM-L6-v2

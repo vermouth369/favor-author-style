@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "FAVoR continuation generation record",
+  "type": "object",
+  "required": [
+    "generation_id",
+    "dataset",
+    "continuation_id",
+    "author_id",
+    "client_id",
+    "seed",
+    "method",
+    "prefix_token_count",
+    "max_new_tokens",
+    "output_text",
+    "output_word_count"
+  ],
+  "properties": {
+    "dataset": {
+      "enum": [
+        "BlogText",
+        "Mythos-Reddit"
+      ]
+    },
+    "method": {
+      "enum": [
+        "Pooled PEFT",
+        "FedAvg",
+        "FedProx",
+        "pFedMe",
+        "Ditto",
+        "FedDPA",
+        "FAVoR",
+        "Local-only + ASCE"
+      ]
+    },
+    "prefix_token_count": {
+      "type": "integer"
+    },
+    "max_new_tokens": {
+      "const": 220
+    },
+    "prompt_text_redacted": {
+      "type": "boolean"
+    },
+    "gold_continuation_redacted": {
+      "type": "boolean"
+    }
+  },
+  "additionalProperties": true
+}

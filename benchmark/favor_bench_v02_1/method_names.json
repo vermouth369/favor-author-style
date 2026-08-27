@@ -1,0 +1,14 @@
+{
+  "official_names_used_in_paper": [
+    "Pooled PEFT",
+    "FedAvg",
+    "FedProx",
+    "pFedMe",
+    "Ditto",
+    "FedDPA",
+    "FAVoR",
+    "Local-only + ASCE"
+  ],
+  "use_official_names_in_archive": true,
+  "note": "The archive uses paper-facing method names only."
+}

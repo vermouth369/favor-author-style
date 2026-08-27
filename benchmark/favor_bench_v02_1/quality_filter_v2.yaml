@@ -1,0 +1,10 @@
+quality_filter:
+  paper_protocol: held_out_continuation
+  filter_scope: generated_continuations
+  fail_if_output_word_count_lt: 20
+  fail_if_distinct_bigram_ratio_lt: 0.15
+  fail_if_empty: true
+  fail_if_templated_refusal: true
+  notes:
+    - Matches the ACL paper: fewer than 20 whitespace-delimited words or distinct-bigram ratio below 0.15.
+    - The filter is intended only to remove degenerate outputs, not to select for style quality.

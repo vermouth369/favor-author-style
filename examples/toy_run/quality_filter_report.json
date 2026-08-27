@@ -1,0 +1,20 @@
+{
+  "total_generated_samples": 1,
+  "passed_samples": 1,
+  "filtered_samples": 0,
+  "overall_pass_rate": 1.0,
+  "filter_reason_counts": {
+    "too_short": 0,
+    "repetitive_bigram": 0,
+    "refusal_or_template": 0
+  },
+  "per_method_pass_rate": {
+    "FAVoR": 1.0
+  },
+  "filter_config": {
+    "min_output_words": 20,
+    "min_distinct_bigram_ratio": 0.15,
+    "refusal_and_template_filter": true
+  },
+  "notes": "Artificial toy fixture for schema validation only; not benchmark data."
+}

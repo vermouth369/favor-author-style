@@ -1,0 +1,33 @@
+{
+  "name": "Angular Style Classification Encoder",
+  "short_name": "ASCE",
+  "backbone": "distilroberta-base",
+  "architecture": {
+    "transformer_layers": 6,
+    "hidden_size": 768,
+    "attention_heads": 12,
+    "feed_forward_size": 3072,
+    "pooling": "attention-mask-aware mean pooling of final hidden states",
+    "dropout": 0.1,
+    "projection": "Linear(768, 256)",
+    "layer_norm": true,
+    "l2_normalize_embeddings": true
+  },
+  "embedding_dim": 256,
+  "objective": "ArcFace-style angular-margin authorship classification",
+  "num_disjoint_training_authors": 50,
+  "train_texts": 4959,
+  "validation_texts": 742,
+  "main_roster_overlap_count": 0,
+  "main_roster_overlap": [],
+  "validation_accuracy": 0.8018867924528302,
+  "validation_macro_f1": 0.6729168204671487,
+  "training_epochs": 3,
+  "max_sequence_length": 256,
+  "scale_gamma": 30.0,
+  "angular_margin": 0.35,
+  "angular_margin_unit": "radians",
+  "classifier_head_status": "discarded after ASCE training",
+  "raw_training_text_included": false,
+  "training_author_ids_included": false
+}
